@@ -2,21 +2,79 @@
 <html lang="jp">
 <head>
     <!-- ⑥↓タイトルを変えてみよう -->
-    <title>〇〇のテストページ</title>
+    <title>たねたろーのテストページ</title>
     <!-- ⑤スタイルシートの設定をしよう -->
+    <link rel="stylesheet" href="./css/style.css">
     <!-- h1.htmlからある行をコピペしてくればOK -->
 </head>
 <body>
-    <h1>見出し</h1>
+    <h1><u>HTMLの実践</u></h1>
     <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
     <div>
          <!-- ①↓に文字を書いてみよう -->
 
+         <h2>文字や数字を打つ</h2>
+         <div>
+         <h3>テスト１つ目</h3>
+         &emsp;&emsp;&emsp;あいうえお<br>
+         </div>
+         <br>
+         <div>
+         <h3>テスト2つ目</h3>
+         &emsp;&emsp;&emsp;12345<br>     
+         </div>
+         <br>
+         <div>
+         <h3>テスト3つ目</h3>
+         &emsp;&emsp;&emsp;abcde<br>     
+         </div>
+         <br>
+         <br>
          <!-- ②↓に画像（imagesフォルダにあるtest.png）を挿入してみよう -->
-
+         <h2>画像を表示させる</h2>   
+         <div>
+            &emsp;&emsp;画像を表示(30%)<br>
+            <img src="./images/testimage.png" width="30%"><br>
+            &emsp;&emsp;画像を表示(40%)<br>
+            <img src="./images/testimage.png" width="40%"><br>
+            &emsp;&emsp;違う画像を表示(30%)<br>
+            &emsp;&emsp; <img src="./images/hypertxt.png" width="30%"><br>
+         </div>
+         <br>
+         <br>
+         
          <!-- ③↓に箇条書きをしてみよう -->
+         <h2>箇条書きをしてみる</h2> 
+         <div>
+         <ol>
+            &emsp;<li>あいうえお</li>
+            &emsp;<li>かきくけこ</li>
+         </ol>
+         </div>
+         <br>
+
+         <div>
+         <ul>
+            &emsp;<li>あいうえお</li>
+            &emsp;<li>かきくけこ</li>
+         </ul>
+         </div>
+         <br>
+         <br>
 
          <!-- ④↓に外部リンクを作ってみよう -->
+         <h2>外部リンクを作ってみよう</h2>
+         <div>
+            <ul>
+             &emsp;<li><a href="./index.html">デザイン演習Ⅰ・Ⅱトップページ</a></li><br>
+             &emsp;<li><a href="../index.html">XBPトップページ</a></li><br>
+             &emsp;<li><a href="https://www.yahoo.co.jp/" target="_blank">Yahoo</a></li><br>
+             &emsp;<li><a href="./files/test.pdf" target="_blank">pdfファイル</a></li><br>   
+             &emsp;<li><a href="https://kummcfes.com/" target="_blank">みなとみらい祭トップページ</a></li><br>
+             &emsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/1Et32E_py68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br>&emsp;みなとみらい祭テーマ発表動画<br>
+            </ul>
+         </div> 
 
     </div>
 
