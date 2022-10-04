@@ -31,6 +31,14 @@ html, body {
 }
 h1{
     text-indent: 0em;
+    text-align: center;
+    padding:20px 0;
+    color: #000;
+    /* background-color: #393939; */
+    background-image: url(../images/background_image_gray.jpg);
+    height: 40px;
+    margin-left: 0;
+    margin-right: auto;
 }
 h2{
     margin-left: 1em;
