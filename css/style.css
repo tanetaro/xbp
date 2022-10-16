@@ -7,7 +7,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  background: #151515 url('../images/bg.jpg') no-repeat fixed left bottom;
+  background: #151515 url('../images/bg.png') no-repeat fixed left bottom;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -174,17 +174,17 @@ body {
   opacity: 0.2;
   transform: scaleY(-1);
 }
-.work-box.Git_Html::after {
-  background-image: url('../images/Git_Html.jpg');
+.work-box.tree::after {
+  background-image: url('../images/tree.jpg');
 }
-.work-box.hamamarket::after {
-  background-image: url('../images/hamamarket.jpg');
+.work-box.building::after {
+  background-image: url('../images/building.jpg');
 }
-.work-box.pinset::after {
-  background-image: url('../images/pinset.jpg');
+.work-box.lake::after {
+  background-image: url('../images/lake.jpg');
 }
-.work-box.sakuseichu::after {
-  background-image: url('../images/sakuseichu.jpg');
+.work-box.sky::after {
+  background-image: url('../images/sky.jpg');
 }
 .work-box:nth-child(odd) .work-image {
   margin: 60% 0 0;
