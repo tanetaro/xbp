@@ -1,27 +1,129 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>XBP_HPsample</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>XBP_HP</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:700,400">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <logotohome>
-    <a href="./index.html"><img src="./images/0_XBlogo.png" alt=""></a>
-    </logotohome>
-    <h1>XBP</h1>
-        <h2>たねたろーのXBPポートフォリオ一覧</h2>
-        <!-- このようにするとコードとして認識されない。（メモができる）-->
-        <!--番号付きのリスト-->
-        <ol>
-            <li><a href="./de12/index.html">デザイン演習Ⅰ・Ⅱ</a></li>
-            <li><a href="./digi_fab/index.html">デジタルファブリケーション</a></li>
-        </ol>
+  <header class="header">
+    <p class="site-title-sub">XBP HP</p>
+    <h1 class="site-title">Tanetaro</h1>
+    <p class="site-description">Check out some of my works.</p>
+    <div class="buttons">
+      <a class="button" href="#about">LEARN MORE</a>
+      <a class="button button-showy" href="#contact">SEND MESSAGE</a>
+    </div>
+  </header>
+  <section class="about" id="about">
+    <h2 class="heading">ABOUT ME</h2>
+    <p class="about-text">
+      はじめまして。たねたろーと申します。<br>
+      生まれてからずっと神奈川県横浜市で過ごしています。
+    </p>
+    <p class="about-text">
+      このサイトは私のXBPポートフォリオを閲覧することができます。<br>
+      どうぞよろしくお願いいたします。
+    </p>
+  </section>
+  <section class="works">
+    <h2 class="heading">WORKS</h2>
+    <div class="works-wrapper">
+      <div class="work-box Git_Html">
+        <img class="work-image" src="images/Git_Html.jpg" alt="制作事例1">
+        <div class="work-description">
+          <div class="work-description-inner">
+            <p class="work-text">
+              GitとHtml（デザイン演習Ⅰ・Ⅱ）<br>
+              Webページ作成のテストも兼ねて。<br>
+              使用ツール：Sketchbook,VSCode<br>
+              <a href="/de12/1.html" class="button button-ghost">READ MORE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="work-box hamamarket">
+        <img class="work-image" src="images/hamamarket.jpg" alt="制作事例2">
+        <div class="work-description">
+          <div class="work-description-inner">
+            <p class="work-text">
+              看板の観察（デザイン演習Ⅰ・Ⅱ）<br>
+              観察の練習。<br>
+              使用ツール：Smartphone<br>
+              <a href="/de12/2.html" class="button button-ghost">READ MORE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="work-box pinset">
+        <img class="work-image" src="images/pinset.jpg" alt="制作事例3">
+        <div class="work-description">
+          <div class="work-description-inner">
+            <p class="work-text">
+              3D Printing（デジタルファブリケーション）<br>
+              ピンセットを進化させる。<br>
+              使用ツール：3D Printer, Fusion 360, Cura<br>
+              <a href="/digi_fab/pinset.html" class="button button-ghost">READ MORE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="work-box sakuseichu">
+        <img class="work-image" src="images/sakuseichu.jpg" alt="制作事例4">
+        <div class="work-description">
+          <div class="work-description-inner">
+            <p class="work-text">
+              作成中<br>
+              <br>
+              <br>
+              <a href="#" class="button button-ghost">READ MORE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="skills">
+    <h2 class="heading">CONTENTS</h2>
+    <div class="skills-wrapper">
+      <div class="skill-box">
+        <a href="./de12/index.html">
+        <i class="skill-icon fa fa-paint-brush"></i>
+        <div class="skill-title">デザイン演習Ⅰ・Ⅱ</div></a>
+        <p class="skill-text">
+          フィールドワーク<br>
+          データサイエンス<br>
+          プログラミングなど
+        </p>
+      </div>
+      <div class="skill-box">
+        <a href="./digi_fab/index.html">
+        <i class="skill-icon fa fa-lightbulb-o"></i>
+        <div class="skill-title">デジタルファブリケーション</div></a>
+        <p class="skill-text">
+          3D Printing<br>
+          CNC Milling<br>
+          Laser Cutiing
+        </p>
+      </div>
 
-            
-        <br>
-        <br>
-
-
+    </div>
+  </section>
+  <!--<section class="contact" id="contact">
+   <h2 class="heading">CONTACT</h2>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="NAME">
+      <textarea name="message" placeholder="MESSAGE"></textarea>
+      <input type="submit" value="SEND">
+    </form>
+  </section>-->
+  <footer class="footer">
+      © Tanetaro
+  </footer>
+  <script src="lib/placeholders.min.js"></script>
 </body>
 </html>
