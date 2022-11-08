@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    
+    <title>たねたろー 賃貸情報の分析</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+    <br>
+    <a href="https://tanetaro.github.io/xbp/">ホーム</a>&emsp;&emsp;&emsp;
+    <a href="https://tanetaro.github.io/xbp/de12/index.html">デザイン演習Ⅰ・Ⅱ</a>&emsp;&emsp;&emsp;
+    <br>
+    
+    
+    <center><h1>デザイン演習　賃貸情報の分析</h1></center>
+    
+    <h4>&emsp;&emsp;&emsp;グラフ作成のヒント</h4>
+    &emsp;&emsp;&emsp;初めに、私はグラフ作成に行き詰ったので、どのデータでどのグラフを作成できるか調べた。
+    <br><br>
+    <h4>&emsp;&emsp;&emsp;①line_n_rooms.py</h4>
+    &emsp;&emsp;&emsp;「 factor 別物件数グラフ」を作成する<br>
+    &emsp;&emsp;&emsp;(例)factor:築年数<br>
+    &emsp;&emsp;&emsp;<img src="./images/築年数別物件数.png" width="50%"><br>
+
+    <br>
+    <h4>&emsp;&emsp;&emsp;②line_rank_bar.py</h4>
+    &emsp;&emsp;&emsp;「 factor_1 別 平均 factor_2 グラフ」を作成する<br>
+    &emsp;&emsp;&emsp;(例)factor_1:面積&emsp;factor_2:家賃<br>
+    &emsp;&emsp;&emsp;<img src="./images/面積別の平均家賃.png" width="50%"><br>
+
+    <br>
+    <h4>&emsp;&emsp;&emsp;③line_scatter.py</h4>
+    &emsp;&emsp;&emsp;「 factor_1 と factor_2 の散布図」を作成する<br>
+    &emsp;&emsp;&emsp;(例)factor_1:面積&emsp;factor_2:家賃<br>
+    &emsp;&emsp;&emsp;<img src="./images/面積と家賃.png" width="40%"><br>
+
+    <br>
+    <h4>&emsp;&emsp;&emsp;④station _n_rooms.py</h4>
+    &emsp;&emsp;&emsp;「 targets , targets の factor 別物件数」グラフを作成する<br>
+    &emsp;&emsp;&emsp;(例)targets:京急本線, 京急逗子線&emsp;factor:駅<br>
+    &emsp;&emsp;&emsp;<img src="./images/京急本線と京急逗子線の駅別物件数.png" width="50%"><br>
+
+    <br>
+    <h4>&emsp;&emsp;&emsp;⑤station _rank_bar.py</h4>
+    &emsp;&emsp;&emsp;「targets , targets の factor_1 別 平均 factor_2 」グラフを作成する<br>
+    &emsp;&emsp;&emsp;(例)targets:京急本線, 京急逗子線&emsp;factor_1:駅&emsp;factor_2:家賃<br>
+    &emsp;&emsp;&emsp;<img src="./images/京急本線と京急逗子線の駅別の平均家賃.png" width="50%"><br>
+
+    <br>
+    <h4>&emsp;&emsp;&emsp;⑥station _scatter.py</h4>
+    &emsp;&emsp;&emsp;「targets , targets の factor_1 と factor_2 の 散布図」を作成する<br>
+    &emsp;&emsp;&emsp;(例)targets:京急本線, 京急逗子線&emsp;factor_1:築年数&emsp;factor_2:家賃<br>
+    &emsp;&emsp;&emsp;<img src="./images/京急本線と京急逗子線の築年数と家賃.png" width="40%"><br>
+ 
+        
+</html>

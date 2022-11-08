@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    
+    <title>たねたろー 可能性の模索</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+    <br>
+    <a href="https://tanetaro.github.io/xbp/">ホーム</a>&emsp;&emsp;&emsp;
+    <a href="https://tanetaro.github.io/xbp/de12/index.html">デザイン演習Ⅰ・Ⅱ</a>&emsp;&emsp;&emsp;
+    <br>
+    
+    
+    <center><h1>デザイン演習　可能性の模索</h1></center>    
+    <br>
+    取り組み１
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">import tkinter</li>
+        <li style="background-color:#EEF;">import tkinter.filedialog</li>
+        <li style="background-color:#EFF;">import random</li>
+        <li style="background-color:#EEF;">import datetime</li>
+        <li style="background-color:#EFF;">import os</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">from PIL import ImageGrab</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">#ランダムに色を生成する</li>
+        <li style="background-color:#EEF;">def make_hexcolor():</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;color_cd = "";</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;for i in range(0, 3):</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color_cd = color_cd + format(int(random.randrange(255)), 'x').zfill(2)</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;return color_cd</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">def change_color():</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;global canvas</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;for ck in range(0, len(canvas_keys)):</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key_name = canvas_keys[ck]</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tagnm = "fill_" + key_name #変更したい四角のタグ名を生成する</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#タグ名で色を変更する</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;canvas.itemconfigure(tagnm, fill="#" + make_hexcolor())</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">root = tkinter.Tk()</li>
+        <li style="background-color:#EFF;">canvas_items = {}</li>
+        <li style="background-color:#EEF;">canvas_keys = ["main", "second", "third"]</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">root.title(u"color_mgr") #ウィンドウタイトルを指定</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">rect_size = 125 #一つの四角のサイズ</li>
+        <li style="background-color:#EFF;">canvas_keys = ["main", "second", "third"] #色表示エリアの名前を仮で指定</li>
+        <li style="background-color:#EEF;">max_size = rect_size*len(canvas_keys) #canvasの最大幅をあらかじめ計算</li>
+        <li style="background-color:#EFF;">root.geometry(str(max_size) + "x500") #ウィンドウサイズを指定</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">#表示するためのcanvasを生成する</li>
+        <li style="background-color:#EEF;">canvas = tkinter.Canvas(root, width=max_size, height=rect_size)</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">#カラー表示部分の設置</li>
+        <li style="background-color:#EFF;">for ck in range(0, len(canvas_keys)):</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;key_name = canvas_keys[ck]</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;canvas_items[key_name] = {}</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;tagnm = "fill_" + key_name #canvasに追加する要素のタグ名を生成</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;#fillで塗りつぶし色を指定します　初期値は真っ白を指定しています。</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;canvas.create_rectangle(rect_size * ck, 0, (rect_size * ck) + rect_size, rect_size, fill="#ffffff", tag=tagnm)</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">#canvasをウィンドウに配置する</li>
+        <li style="background-color:#EEF;">canvas.grid(row=0, column=0, columnspan=4)</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">btn_0 = tkinter.Button(root, text="色を変える", command=lambda: change_color(), width=10, height=2)</li>
+        <li style="background-color:#EEF;">btn_0.grid(row=3, column=1, columnspan=2)</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">change_color()</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">root.mainloop()</li>
+        </ol>
+    </code>
+    <br>
+    取り組み２
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">import random</li>
+        <li style="background-color:#EEF;">color1 = ["#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)])]</li>
+        <li style="background-color:#EFF;">print(color1)</li>
+        <li style="background-color:#EEF;">color2 = ["#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)])]</li>
+        <li style="background-color:#EFF;">print(color2)</li>
+        <li style="background-color:#EEF;">color3 = ["#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)])]</li>
+        <li style="background-color:#EFF;">print(color3)</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"></li>
+        </ol>
+    </code>
+
+    <div>
+        <h4>参考文献</h4>
+        <ul>
+        <li><a href="https://www.delftstack.com/ja/howto/python/generate-random-colors-python/">Python でランダムな色を生成する(外部サイト)</a></li><br>    
+        </ul>
+        </div>
+
+ 
+        
+</html>
