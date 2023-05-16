@@ -21,50 +21,43 @@ logotohome img{
 
 
 /* ========== common ========== */
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: rgba(31, 31, 29, 0.363);
+html, body {
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #393939;
+    margin-left: 15px;
+    margin-bottom: 40px;
+	background: #efefef;
 }
-
-.title {
-    height: 310px;
-    background-image: url(../images/lab.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    text-shadow: 1px 1px 10px #4b2c14;
-}
-
-.title h1 {
-    font-family: 'Zen Maru Gothic', sans-serif;
-    font-size: 60px;
-    font-weight: bold;
-}
-
-
-
-.contents {
-    font-family: 'Zen Maru Gothic', sans-serif;
-    padding-top: 80px;
-    font-size: 20px;
+h1{
+    text-indent: 0em;
     text-align: center;
-    
-}
-
-.contents h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: black;
-    margin-top: 20px;
-    margin-left: auto;
+    padding:20px 0;
+    color: #000;
+    /* background-color: #393939; */
+    background-image: url(../images/background_image_gray.jpg);
+    height: 40px;
+    margin-left: 0;
     margin-right: auto;
+}
+h2{
+    margin-left: 1em;
+    margin-top: 1em;
+}
+h3{
+    margin-left: 2em;
+}
+div{
+    margin-top: 1em;
+    margin-left: 3em;
+}
+p{
+    margin-left: 3em;
+}
+span.blackback{
+    text-indent: 3em;
+    background: #393939;
+    color: #efefef;
 }
 
 
